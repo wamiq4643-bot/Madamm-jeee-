@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+}
+
+#intro,
+#proposal,
+#final{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(180deg,#000,#12001f,#000);
+}
+
+.hidden{
+    display:none !important;
+}
+
+.glow{
+    font-size:3rem;
+    color:#ff4da6;
+    text-shadow:
+        0 0 10px #ff4da6,
+        0 0 25px #ff4da6,
+        0 0 45px #ff66b3;
+    animation:pulse 2s infinite;
+}
+
+#intro p{
+    margin-top:15px;
+    opacity:.9;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    background:#ff2e88;
+    color:white;
+    transition:.35s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px #ff2e88;
+}
+
+#proposal h2{
+    font-family:'Great Vibes',cursive;
+    font-size:3rem;
+    color:#ff77bb;
+}
+
+#message{
+    max-width:700px;
+    margin:30px auto;
+    line-height:1.8;
+    font-size:1.15rem;
+}
+
+.question{
+    font-size:3rem;
+    color:#ffd700;
+    margin:20px 0;
+    animation:pulse 2s infinite;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+#final h1{
+    color:#ff6fb5;
+    font-size:3rem;
+}
+
+#final h2{
+    margin-top:40px;
+    color:#ffd700;
+    font-family:'Great Vibes',cursive;
+    font-size:2.8rem;
+}
+
+#hearts{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    bottom:-30px;
+    color:#ff4d88;
+    animation:floatUp linear forwards;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0) scale(.7);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh) scale(1.5);
+        opacity:0;
+    }
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.06);}
+    100%{transform:scale(1);}
+}
+
+@media(max-width:600px){
+
+.glow{
+font-size:2.1rem;
+}
+
+.question{
+font-size:2rem;
+}
+
+#proposal h2{
+font-size:2.4rem;
+}
+
+button{
+width:90%;
+max-width:280px;
+}
+}
